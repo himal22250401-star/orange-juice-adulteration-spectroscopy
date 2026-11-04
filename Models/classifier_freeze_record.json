@@ -1,0 +1,19 @@
+{
+  "frozen": true,
+  "endpoint": "classification_3class",
+  "preprocessing": "EMSC",
+  "estimator": "LogisticRegression",
+  "hyperparameters": {
+    "C": 0.9846738873614566,
+    "class_weight": null,
+    "max_iter": 5000
+  },
+  "calibration": "uncalibrated",
+  "scaler": "StandardScaler (fitted on development set)",
+  "dev_n_spectra": 1060,
+  "dev_n_groups": 53,
+  "model_file": "C:\\Analysis\\Orange Juice\\Models\\classifier_frozen.joblib",
+  "model_sha256": "e75efa7475de3073e4ddb430f8b29588649c9a666c3e7d860fd5a08862b5403f",
+  "frozen_utc": "2026-11-04T17:33:57.576778Z",
+  "note": "PLS-DA is the reported chemometric benchmark; LogReg frozen for native probabilities required by calibration and the sealed-test metrics. No class weighting or probability calibration improved development CV."
+}

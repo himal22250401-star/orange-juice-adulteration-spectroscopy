@@ -1,0 +1,200 @@
+{
+  "schema_version": "1.0",
+  "project": "Orange Juice UV-Vis dye adulteration",
+  "project_root": "C:\\Analysis\\Orange Juice",
+  "created_utc": "2026-11-04T13:52:28+00:00",
+  "updated_utc": "2026-11-04T17:35:09+00:00",
+  "dataset": {
+    "sha256": "25ba29026049ce1a17f10118dcb09e8423ec80f04c1a7f895c6730b07564ec04"
+  },
+  "environment": {
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scipy": "1.18.1",
+    "sklearn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "joblib": "1.6.0",
+    "xgboost": "3.4.1",
+    "lightgbm": "4.7.0",
+    "optuna": "5.0.0"
+  },
+  "cells": {},
+  "data_objects": {},
+  "split": {
+    "sealed": true,
+    "seed": 42
+  },
+  "cv": {},
+  "preprocessing": {
+    "retained": [
+      "Raw",
+      "SG1",
+      "SNV+SG1",
+      "MSC",
+      "L2",
+      "EMSC",
+      "PQN"
+    ],
+    "rejected": {
+      "Detrend": {
+        "reason": "negative metanil yellow amplitude in the analytical window",
+        "recomputed_value": null,
+        "confirmed": false
+      },
+      "SNV": {
+        "reason": "noise amplification about 6.59x against a 5x limit",
+        "recomputed_value": null,
+        "confirmed": false
+      }
+    }
+  },
+  "benchmark": {},
+  "optimisation": {},
+  "calibration": {},
+  "final_models": {
+    "regressors": {
+      "Tartrazine": {
+        "frozen": true,
+        "preprocessing": "Raw",
+        "estimator": "PLSRegression",
+        "n_components": 3,
+        "dev_RMSECV": 0.3323,
+        "model_file": "regressor_t_frozen.joblib",
+        "model_sha256": "b73c88592aef8d9a0addadad3879d530323fc08584c42bcb7c1a17ad9fccd5bd",
+        "frozen_utc": "2026-11-04T17:34:59.568294Z"
+      },
+      "Sunset Yellow": {
+        "frozen": true,
+        "preprocessing": "Raw",
+        "estimator": "PLSRegression",
+        "n_components": 2,
+        "dev_RMSECV": 0.4628,
+        "model_file": "regressor_sy_frozen.joblib",
+        "model_sha256": "d94d9dff2841a84b571a37c3b4205374ff015fe0404f5f42997ed3d5376ab278",
+        "frozen_utc": "2026-11-04T17:35:04.708629Z"
+      },
+      "Metanil Yellow": {
+        "frozen": true,
+        "preprocessing": "Raw",
+        "estimator": "PLSRegression",
+        "n_components": 3,
+        "dev_RMSECV": 0.2042,
+        "model_file": "regressor_my_frozen.joblib",
+        "model_sha256": "f2b22ec59ad5879af9034856f2f127d665c3199a26bbc2830783280bf18a5e16",
+        "frozen_utc": "2026-11-04T17:35:09.066683Z"
+      }
+    },
+    "classifier": {
+      "frozen": true,
+      "preprocessing": "EMSC",
+      "estimator": "LogisticRegression",
+      "model_file": "C:\\Analysis\\Orange Juice\\Models\\classifier_frozen.joblib",
+      "model_sha256": "e75efa7475de3073e4ddb430f8b29588649c9a666c3e7d860fd5a08862b5403f",
+      "frozen_utc": "2026-11-04T14:46:45.787623Z",
+      "note": "reconciled in Cell 36 from Models/classifier_freeze_record.json (frozen in Cell 30)"
+    }
+  },
+  "test_evaluations": {
+    "classification": {
+      "performed": true,
+      "n_evaluations": 1,
+      "performed_utc": "2026-11-04T14:46:47+00:00",
+      "metrics": {
+        "macro_f1": 1.0,
+        "balanced_accuracy": 1.0,
+        "weighted_f1": 1.0,
+        "accuracy": 1.0,
+        "mcc": 1.0,
+        "multiclass_brier": 7.327396013961678e-07,
+        "ece_10bin": 0.00027163716567779606,
+        "group_macro_f1": 1.0,
+        "group_accuracy": 1.0,
+        "n_spectra": 260,
+        "n_groups": 13
+      }
+    },
+    "Tartrazine": {
+      "performed": true,
+      "n_evaluations": 1,
+      "performed_utc": "2026-11-04T15:13:29+00:00",
+      "metrics": {
+        "RMSEP": 0.6298,
+        "MAE": 0.4109,
+        "R2": 0.9917,
+        "bias": 0.2889,
+        "slope": 1.0345,
+        "intercept": -0.1386,
+        "residual_SD": 0.5624,
+        "reference_SD": 6.9515,
+        "RPD": 11.038,
+        "group_RMSEP": 0.6134,
+        "group_R2": 0.9921,
+        "group_bias": 0.2889,
+        "n_spectra": 100,
+        "n_groups": 5,
+        "n_levels": 5
+      }
+    },
+    "Sunset Yellow": {
+      "performed": true,
+      "n_evaluations": 1,
+      "performed_utc": "2026-11-04T15:13:30+00:00",
+      "metrics": {
+        "RMSEP": 0.5089,
+        "MAE": 0.3882,
+        "R2": 0.9923,
+        "bias": -0.3432,
+        "slope": 0.964,
+        "intercept": 0.0966,
+        "residual_SD": 0.3777,
+        "reference_SD": 5.8396,
+        "RPD": 11.474,
+        "group_RMSEP": 0.464,
+        "group_R2": 0.9936,
+        "group_bias": -0.3432,
+        "n_spectra": 100,
+        "n_groups": 5,
+        "n_levels": 5
+      }
+    },
+    "Metanil Yellow": {
+      "performed": true,
+      "n_evaluations": 1,
+      "performed_utc": "2026-11-04T15:13:31+00:00",
+      "metrics": {
+        "RMSEP": 0.3069,
+        "MAE": 0.2627,
+        "R2": 0.9946,
+        "bias": -0.2427,
+        "slope": 0.9829,
+        "intercept": -0.0943,
+        "residual_SD": 0.1895,
+        "reference_SD": 4.2253,
+        "RPD": 13.768,
+        "group_RMSEP": 0.2784,
+        "group_R2": 0.9956,
+        "group_bias": -0.2427,
+        "n_spectra": 60,
+        "n_groups": 3,
+        "n_levels": 3
+      }
+    }
+  },
+  "registries": {
+    "figures": {},
+    "tables": {},
+    "next_figure_number": 1,
+    "next_table_number": 1
+  },
+  "decisions": [],
+  "issues": [],
+  "rejected_approaches": [
+    {
+      "what": "deep learning of any kind",
+      "why": "effective sample size is 66 preparations; excluded by project rule",
+      "cell": "n/a"
+    }
+  ]
+}

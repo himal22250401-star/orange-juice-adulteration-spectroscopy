@@ -1,0 +1,22 @@
+{
+  "retained": [
+    "Raw",
+    "SG1",
+    "SNV+SG1",
+    "MSC",
+    "L2",
+    "EMSC",
+    "PQN"
+  ],
+  "rejected": [
+    "SNV",
+    "Detrend"
+  ],
+  "locked": true,
+  "gate": "G2",
+  "snv_amplification_recomputed": 6.8444,
+  "snv_limit": 5.0,
+  "detrend_my_mean_amplitude": -0.173937,
+  "written_utc": "2026-11-04T17:30:07.572251Z",
+  "dataset_sha256": "25ba29026049ce1a17f10118dcb09e8423ec80f04c1a7f895c6730b07564ec04"
+}

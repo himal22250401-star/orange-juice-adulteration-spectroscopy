@@ -1,0 +1,55 @@
+{
+  "sealed": true,
+  "sealed_utc": "2026-11-04T17:30:08.144003Z",
+  "seed": 42,
+  "dataset_sha256": "25ba29026049ce1a17f10118dcb09e8423ec80f04c1a7f895c6730b07564ec04",
+  "test_levels": {
+    "Tartrazine": [
+      1.0,
+      9.0,
+      14.0,
+      17.0,
+      21.0
+    ],
+    "Sunset Yellow": [
+      5.0,
+      6.0,
+      14.0,
+      16.0,
+      20.0
+    ],
+    "Metanil Yellow": [
+      3.0,
+      10.0,
+      13.0
+    ]
+  },
+  "test_evaluations": {
+    "adulterant_identity": {
+      "performed": false,
+      "performed_utc": null,
+      "count": 0
+    },
+    "tartrazine_concentration": {
+      "performed": false,
+      "performed_utc": null,
+      "count": 0
+    },
+    "sunset_yellow_concentration": {
+      "performed": false,
+      "performed_utc": null,
+      "count": 0
+    },
+    "metanil_yellow_concentration": {
+      "performed": false,
+      "performed_utc": null,
+      "count": 0
+    }
+  },
+  "endpoints": [
+    "adulterant_identity",
+    "tartrazine_concentration",
+    "sunset_yellow_concentration",
+    "metanil_yellow_concentration"
+  ]
+}
