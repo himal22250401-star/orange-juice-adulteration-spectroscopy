@@ -153,13 +153,6 @@ Over pooled out-of-sample predictions (development out-of-fold combined with the
 ├── Tables/                           # Archived analysis tables (XLSX)
 ├── Checkpoints/                      # Hash-validated cell checkpoints (.pkl) + project_state.json
 ├── Models/                           # Frozen pipelines (.joblib) + JSON freeze records
-├── oj_analysis/                      # Project state & sealed-test audit guard (required to re-run)
-│   ├── __init__.py
-│   ├── audit.py
-│   ├── config.py
-│   └── state.py
-├── requirements.txt                  # Python package dependencies
-└── README.md
 ```
 
 > `oj_analysis/` and `requirements.txt` are required to re-execute the notebook; the serialized classifier in `Models/` additionally relies on the custom `EMSC` transformer defined in the notebook.
