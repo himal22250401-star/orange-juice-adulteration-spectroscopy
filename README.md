@@ -1,4 +1,4 @@
-# UV–Vis Spectroscopic Detection and Quantification of Synthetic Azo Dyes in Orange Juice
+# Machine Learning-Assisted UV–Vis Spectroscopy for the Identification and Quantification of Synthetic Azo Dyes in Orange Juice
 
 **Repository:** `orange-juice-adulteration-spectroscopy`
 
